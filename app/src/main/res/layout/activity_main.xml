@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <Button
+        android:id="@+id/set_resolution_acti"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:text="设置分辨率activity"
+        style="@style/common_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/set_resolution_dia"
+        style="@style/common_button"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:text="设置分辨率dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/set_resolution_acti"
+        app:layout_constraintStart_toEndOf="@+id/set_resolution_acti"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/load_html"
+        style="@style/common_button"
+        android:layout_marginTop="28dp"
+        android:text="@string/load_html"
+        app:layout_constraintStart_toStartOf="@+id/set_resolution_acti"
+        app:layout_constraintTop_toBottomOf="@+id/set_resolution_acti" />
+
+    <Button
+        android:id="@+id/get"
+        style="@style/common_button"
+        android:layout_marginStart="40dp"
+        android:text="@string/get"
+        app:layout_constraintBottom_toBottomOf="@+id/load_html"
+        app:layout_constraintStart_toEndOf="@+id/load_html"
+        app:layout_constraintTop_toTopOf="@+id/load_html" />
+
+    <Button
+        android:id="@+id/post"
+        style="@style/common_button"
+        android:layout_marginStart="40dp"
+        android:text="@string/post"
+        app:layout_constraintBottom_toBottomOf="@+id/get"
+        app:layout_constraintStart_toEndOf="@+id/get"
+        app:layout_constraintTop_toTopOf="@+id/get" />
+
+    <Button
+        android:id="@+id/start_browser"
+        style="@style/common_button"
+        android:layout_marginTop="20dp"
+        android:text="@string/start_browser"
+        app:layout_constraintStart_toStartOf="@+id/load_html"
+        app:layout_constraintTop_toBottomOf="@+id/load_html" />
+
+    <Button
+        android:id="@+id/random"
+        android:layout_marginStart="40dp"
+        android:text="@string/random"
+        style="@style/common_button"
+        app:layout_constraintBottom_toBottomOf="@+id/start_browser"
+        app:layout_constraintStart_toEndOf="@+id/start_browser"
+        app:layout_constraintTop_toTopOf="@+id/start_browser"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/load_html_x5"
+        style="@style/common_button"
+        android:layout_marginStart="40dp"
+        android:text="加载网页x5"
+        app:layout_constraintBottom_toBottomOf="@+id/random"
+        app:layout_constraintStart_toEndOf="@+id/random"
+        app:layout_constraintTop_toTopOf="@+id/random"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/md5"
+        style="@style/common_button"
+        android:layout_marginStart="44dp"
+        android:text="MD5"
+        app:layout_constraintBottom_toBottomOf="@+id/md5_content"
+        app:layout_constraintStart_toEndOf="@+id/md5_content"
+        app:layout_constraintTop_toTopOf="@+id/md5_content"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/md5_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Liyy"
+        app:layout_constraintStart_toStartOf="@+id/start_browser"
+        app:layout_constraintTop_toBottomOf="@+id/start_browser" />
+
+    <Button
+        android:id="@+id/calculator"
+        style="@style/common_button"
+        android:layout_marginStart="40dp"
+        android:text="@string/calculator"
+        app:layout_constraintBottom_toBottomOf="@+id/set_resolution_dia"
+        app:layout_constraintStart_toEndOf="@+id/set_resolution_dia"
+        app:layout_constraintTop_toTopOf="@+id/set_resolution_dia"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/play_music"
+        style="@style/common_button"
+        android:layout_marginStart="40dp"
+        android:text="@string/play_music"
+        app:layout_constraintBottom_toBottomOf="@+id/calculator"
+        app:layout_constraintStart_toEndOf="@+id/calculator"
+        app:layout_constraintTop_toTopOf="@+id/calculator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

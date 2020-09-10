@@ -1,0 +1,56 @@
+apply plugin: 'maven'
+apply plugin: 'bintray-release'
+
+publish {
+    userOrg = 'shichuanenhui'
+    groupId = 'com.github.shichuanenhui'
+    artifactId = releaseArtifact
+    publishVersion = '1.0.0'
+    desc = ''
+    website = 'https://github.com/shichuanenhui/SuperTube'
+}
+
+//gradlew clean build bintrayUpload -PbintrayUser=shichuanenhui -PbintrayKey=90dd8475b6c08314314e6afc42b0d0b0b26adf53 -PdryRun=false
+
+def pom_version = '1.0.0'
+def pom_artifactId = releaseArtifact
+def pom_groupId = 'com.github.shichuanenhui'
+def nexus_userName = 'admin'
+def nexus_password = 'admin'
+def nexus_url = 'http://10.10.6.118:8081/repository/maven-releases/'
+
+task androidJavadocs(type: Javadoc) {
+    options.encoding = "UTF-8"
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+    classifier = 'javadoc'
+    from androidJavadocs.destinationDir
+}
+
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+artifacts {
+    archives androidSourcesJar
+    archives androidJavadocsJar
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: nexus_url) {
+                authentication(userName: nexus_userName, password: nexus_password)
+            }
+            pom.project {
+                version pom_version
+                artifactId pom_artifactId
+                groupId pom_groupId
+            }
+        }
+    }
+}

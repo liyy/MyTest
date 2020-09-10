@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">My Test</string>
+
+    <!-- 主界面布局所需要的字符串资源-->
+    <string name="simple_dialog">基本对话框</string>
+    <string name="tips">提示</string>
+
+    <!-- 对话框所需要的字符串资源-->
+    <string name="define">确定</string>
+    <string name="cancel">取消</string>
+
+    <!-- 对话框提示信息字符串资源-->
+    <string name="toast_define">你点击了确定按钮</string>
+    <string name="toast_cancel">你点击了取消按钮</string>
+
+    <string name="load_html">加载网页</string>
+    <string name="get">GET</string>
+    <string name="post">POST</string>
+    <string name="start_browser">启动浏览器</string>
+    <string name="random">随机数</string>
+    <string name="my_name">Liyy</string>
+    <string name="calculator">计算器</string>
+    <string name="play_music">播放音乐</string>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x120"
+        android:layout_marginStart="@dimen/x16"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginEnd="@dimen/x16"
+        android:background="@drawable/btn_calculator_nor"
+        android:gravity="center_vertical"
+        android:padding="@dimen/x10"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clear"
+        style="@style/calculator_button"
+        android:layout_marginTop="@dimen/x50"
+        android:text="C"
+        app:layout_constraintStart_toStartOf="@+id/display"
+        app:layout_constraintTop_toBottomOf="@+id/display" />
+
+    <Button
+        android:id="@+id/num1"
+        style="@style/calculator_button"
+        android:layout_marginTop="@dimen/x50"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="@+id/clear"
+        app:layout_constraintTop_toBottomOf="@+id/clear" />
+
+    <Button
+        android:id="@+id/num2"
+        android:layout_marginStart="@dimen/x150"
+        android:text="2"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num1"
+        app:layout_constraintStart_toEndOf="@+id/num1"
+        app:layout_constraintTop_toTopOf="@+id/num1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/num3"
+        android:layout_marginStart="@dimen/x150"
+        android:text="3"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num2"
+        app:layout_constraintStart_toEndOf="@+id/num2"
+        app:layout_constraintTop_toTopOf="@+id/num2" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_marginStart="@dimen/x150"
+        android:text="+"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num3"
+        app:layout_constraintStart_toEndOf="@+id/num3"
+        app:layout_constraintTop_toTopOf="@+id/num3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/num4"
+        android:layout_marginTop="@dimen/x50"
+        android:text="4"
+        style="@style/calculator_button"
+        app:layout_constraintStart_toStartOf="@+id/num1"
+        app:layout_constraintTop_toBottomOf="@+id/num1" />
+
+    <Button
+        android:id="@+id/num5"
+        android:text="5"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num4"
+        app:layout_constraintStart_toStartOf="@+id/num2"
+        app:layout_constraintTop_toTopOf="@+id/num4" />
+
+    <Button
+        android:id="@+id/num6"
+        android:text="6"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num5"
+        app:layout_constraintStart_toStartOf="@+id/num3"
+        app:layout_constraintTop_toTopOf="@+id/num5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/subtract"
+        android:text="-"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num6"
+        app:layout_constraintStart_toStartOf="@+id/add"
+        app:layout_constraintTop_toTopOf="@+id/num6" />
+
+    <Button
+        android:id="@+id/num7"
+        android:layout_marginTop="@dimen/x50"
+        android:text="7"
+        style="@style/calculator_button"
+        app:layout_constraintStart_toStartOf="@+id/num4"
+        app:layout_constraintTop_toBottomOf="@+id/num4" />
+
+    <Button
+        android:id="@+id/num8"
+        android:text="8"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num7"
+        app:layout_constraintStart_toStartOf="@+id/num5"
+        app:layout_constraintTop_toTopOf="@+id/num7" />
+
+    <Button
+        android:id="@+id/num9"
+        android:text="9"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num8"
+        app:layout_constraintStart_toStartOf="@+id/num6"
+        app:layout_constraintTop_toTopOf="@+id/num8" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:text="x"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num9"
+        app:layout_constraintStart_toStartOf="@+id/subtract"
+        app:layout_constraintTop_toTopOf="@+id/num9" />
+
+    <Button
+        android:id="@+id/num0"
+        android:layout_marginTop="@dimen/x50"
+        android:text="0"
+        style="@style/calculator_button"
+        app:layout_constraintStart_toStartOf="@+id/num7"
+        app:layout_constraintTop_toBottomOf="@+id/num7" />
+
+    <Button
+        android:id="@+id/point"
+        android:text="."
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/num0"
+        app:layout_constraintStart_toStartOf="@+id/num8"
+        app:layout_constraintTop_toTopOf="@+id/num0" />
+
+    <Button
+        android:id="@+id/equal"
+        android:text="="
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/point"
+        app:layout_constraintStart_toStartOf="@+id/num9"
+        app:layout_constraintTop_toTopOf="@+id/point"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/divide"
+        android:text="/"
+        style="@style/calculator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/equal"
+        app:layout_constraintStart_toStartOf="@+id/multiply"
+        app:layout_constraintTop_toTopOf="@+id/equal" />
+</androidx.constraintlayout.widget.ConstraintLayout>

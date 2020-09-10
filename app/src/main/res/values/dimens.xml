@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_text_size">@dimen/x24</dimen>
+    <dimen name="calculator_button_text_size">@dimen/x35</dimen>
+    <dimen name="common_radius">@dimen/x5</dimen>
+</resources>
